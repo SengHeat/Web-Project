@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Methods Example</title>
+  <style>
+    .highlight { color: red; font-weight: bold; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <h1 id="main-heading">Welcome to DOM Methods</h1>
+
+  <div id="content">
+    <p>This is a paragraph of text.</p>
+    <button id="changeTextButton">Change Text</button>
+    <button id="toggleClassButton">Toggle Highlight Class</button>
+    <button id="hideButton">Hide Paragraph</button>
+  </div>
+
+  <div>
+    <input type="text" id="userInput" placeholder="Enter something...">
+    <button id="getInputButton">Get Input Value</button>
+  </div>
+
+  <div>
+    <button id="showAlertButton">Show Alert</button>
+    <button id="askConfirmationButton">Ask Confirmation</button>
+    <button id="showPromptButton">Show Prompt</button>
+  </div>
+
+  <script>
+    // Accessing elements by ID
+    const mainHeading = document.getElementById('main-heading');
+    const paragraph = document.querySelector('p');
+    const changeTextButton = document.getElementById('changeTextButton');
+    const toggleClassButton = document.getElementById('toggleClassButton');
+    const hideButton = document.getElementById('hideButton');
+    const userInput = document.getElementById('userInput');
+    const getInputButton = document.getElementById('getInputButton');
+    const showAlertButton = document.getElementById('showAlertButton');
+    const askConfirmationButton = document.getElementById('askConfirmationButton');
+    const showPromptButton = document.getElementById('showPromptButton');
+
+    // Change text content of the paragraph
+    changeTextButton.addEventListener('click', () => {
+      paragraph.textContent = 'The text has been changed!';
+    });
+
+    // Toggle highlight class on paragraph
+    toggleClassButton.addEventListener('click', () => {
+      paragraph.classList.toggle('highlight');
+    });
+
+    // Hide paragraph
+    hideButton.addEventListener('click', () => {
+      paragraph.classList.toggle('hidden');
+    });
+
+    // Get input value and display it
+    getInputButton.addEventListener('click', () => {
+      alert('You entered: ' + userInput.value);
+    });
+
+    // Show alert box
+    showAlertButton.addEventListener('click', () => {
+      alert('This is an alert!');
+    });
+
+    // Ask for confirmation
+    askConfirmationButton.addEventListener('click', () => {
+      const userConfirmed = confirm('Do you confirm this action?');
+      if (userConfirmed) {
+        alert('You confirmed the action!');
+      } else {
+        alert('Action canceled.');
+      }
+    });
+
+    // Show prompt and log the input
+    showPromptButton.addEventListener('click', () => {
+      const userInputValue = prompt('Please enter your name:');
+      if (userInputValue) {
+        alert('Hello, ' + userInputValue + '!');
+      }
+    });
+
+    // Adding a new element to the DOM dynamically
+    const newElementButton = document.createElement('button');
+    newElementButton.textContent = 'New Dynamic Button';
+    newElementButton.addEventListener('click', () => {
+      alert('You clicked the new button!');
+    });
+
+    // Appending the new button to the body
+    document.body.appendChild(newElementButton);
+
+    // Demonstrating getBoundingClientRect
+    mainHeading.addEventListener('click', () => {
+      const rect = mainHeading.getBoundingClientRect();
+      alert('Heading position: top=' + rect.top + ', left=' + rect.left);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* General container styling */
+.container {
+    width: 80%; /* 80% of the viewport width */
+    margin: 20px auto; /* Center the container horizontally */
+    padding: 20px; /* Inner spacing */
+    background-color: #f8f9fa; /* Light gray background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center align text */
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+/* Additional styles for text inside the container */
+.container h1 {
+    color: #2f4f4f; /* Dark slate gray color for heading */
+    margin-bottom: 10px;
+}
+
+.container p {
+    color: #555; /* Gray text color */
+    line-height: 1.5; /* Improve text readability */
+}

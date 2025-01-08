@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Example</title>
+</head>
+<body>
+    <h1>Welcome to BOM Example</h1>
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="changeLocation()">Go to Example.com</button>
+    <button onclick="displayBrowserInfo()">Display Browser Info</button>
+    <button onclick="storeData()">Store Data in Local Storage</button>
+
+    <script>
+        // Show an alert
+        function showAlert() {
+            window.alert("Hello, this is an alert!");
+        }
+
+        // Change location (navigate to a new URL)
+        function changeLocation() {
+            window.location.href = "https://www.example.com";
+        }
+
+        // Display some browser information
+        function displayBrowserInfo() {
+            let browserInfo = `
+                Browser Name: ${navigator.appName} <br>
+                User Agent: ${navigator.userAgent} <br>
+                Screen Width: ${screen.width} px <br>
+                Screen Height: ${screen.height} px <br>
+            `;
+            document.body.innerHTML += browserInfo;
+        }
+
+        // Store and retrieve data using localStorage
+        function storeData() {
+            localStorage.setItem('username', 'JohnDoe');
+            alert("Stored username: " + localStorage.getItem('username'));
+            // Accessing the window object
+window.alert("Hello, BOM!");
+
+// Using the location object to change the URL
+window.location.href = "https://www.example.com";
+
+// Using the navigator object to get browser information
+console.log("Browser Name: " + navigator.appName);
+console.log("User Agent: " + navigator.userAgent);
+
+// Using the screen object to get screen dimensions
+console.log("Screen Width: " + screen.width);
+console.log("Screen Height: " + screen.height);
+
+// Using the history object to navigate back
+history.back();
+
+// Using localStorage to store data
+localStorage.setItem('username', 'JohnDoe');
+console.log(localStorage.getItem('username'));
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Math Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .result {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-left: 5px solid #00796b;
+        }
+        label, input {
+            display: block;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interactive Math Operations</h1>
+    
+    <div class="container">
+        <label for="num1">Enter a number:</label>
+        <input type="number" id="num1" placeholder="Enter a number" />
+
+        <label for="num2">Enter another number (for power/exponentiation):</label>
+        <input type="number" id="num2" placeholder="Enter another number" />
+
+        <button onclick="performOperations()">Calculate</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function performOperations() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+
+            // Check if the numbers are valid
+            if (isNaN(num1) || (isNaN(num2) && num2 !== 0)) {
+                document.getElementById('result').innerHTML = 'Please enter valid numbers.';
+                return;
+            }
+
+            // Calculate results
+            const absValue = Math.abs(num1);
+            const squareRoot = Math.sqrt(num1);
+            const powerResult = Math.pow(num1, num2);
+            const randomNum = Math.floor(Math.random() * num1) + 1;
+            const maxNum = Math.max(num1, num2);
+            const minNum = Math.min(num1, num2);
+
+            // Display results
+            let resultHTML = `
+                <p><strong>Absolute Value of ${num1}:</strong> ${absValue}</p>
+                <p><strong>Square Root of ${num1}:</strong> ${squareRoot}</p>
+                <p><strong>${num1} raised to the power of ${num2}:</strong> ${powerResult}</p>
+                <p><strong>Random number between 1 and ${num1}:</strong> ${randomNum}</p>
+                <p><strong>Maximum of ${num1} and ${num2}:</strong> ${maxNum}</p>
+                <p><strong>Minimum of ${num1} and ${num2}:</strong> ${minNum}</p>
+            `;
+
+            document.getElementById('result').innerHTML = resultHTML;
+        }
+    </script>
+
+</body>
+</html>

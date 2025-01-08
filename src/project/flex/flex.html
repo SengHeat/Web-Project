@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <link rel="stylesheet" href="flex.css">
+    <!-- internal style ការរចនាក្នុងវេបផេក -->
+    <style>
+        a {
+            background: cornflowerblue;
+            padding: 4px 8px;
+            border-radius: 8px;
+        }
+        body {
+            margin: 100px;
+            background-color: #E0E0E0;
+        }
+        /* #one a{
+            margin: 10px;
+            flex-direction: row-reverse;
+        } */
+        #two a {
+            width: 100px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Layout Simple</h1> <!--Flext Like Container at Flutter-->
+    <nav id="one" style=" flex-direction: row-reverse;">  <!--inline style ការរចនាធាតុ-->
+        <a href="">Link one</a>
+        <a href="">Link Two</a>
+        <a href="">Link Three</a>
+        <a href="">Link Fove</a>
+        <a href="">Link Five</a>
+    </nav>
+    <hr>
+    <h1>Flex Layout Flex</h1>
+    <nav id="two" style="display: flex">
+        <a href="">Link one</a>
+        <a href="">Link Two</a>
+        <a href="">Link Three</a>
+        <a href="">Link Fove</a>
+        <a href="">Link Five</a>
+    </nav>
+    <hr>
+    <h1>Flex Layout Space Between</h1>
+    <nav id="three" style="display: flex; justify-content: space-between;"">
+        <a href="">Link one</a>
+        <a href="">Link Two</a>
+        <a href="">Link Three</a>
+        <a href="">Link Fove</a>
+        <a href="">Link Five</a>
+    </nav>
+    <hr>
+    <h1>Flex Layout Space Around</h1>
+    <nav id="fove" style="display: flex; justify-content: space-around;"">
+        <a href="">Link one</a>
+        <a href="">Link Two</a>
+        <a href="">Link Three</a>
+        <a href="">Link Fove</a>
+        <a href="">Link Five</a>
+    </nav>
+    <hr>
+    <h1>Flex Layout Space Evenly</h1>
+    <nav id="five" style="display: flex; justify-content: space-evenly;"">
+        <a href="">Link one</a>
+        <a href="">Link Two</a>
+        <a href="">Link Three</a>
+        <a href="">Link Fove</a>
+        <a href="">Link Five</a>
+    </nav>
+    <hr>
+    <h1>Flex Layout Start</h1>
+    <nav id="six" style="display: flex; justify-content: start;"">
+        <a href="">Link one</a>
+        <a href="">Link Two</a>
+        <a href="">Link Three</a>
+        <a href="">Link Fove</a>
+        <a href="">Link Five</a>
+    </nav>
+    <hr>
+    <h1>Flex Layout End</h1>
+    <nav id="seven" style="display: flex; justify-content: end;"">
+        <a href="">Link one</a>
+        <a href="">Link Two</a>
+        <a href="">Link Three</a>
+        <a href="">Link Fove</a>
+        <a href="">Link Five</a>
+    </nav>
+    <hr>
+    <h1>Flex Layout stretch</h1>
+    <nav id="eg" style="display: flex; justify-content: stretch;"">
+        <a href="">Link one</a>
+        <a href="">Link Two</a>
+        <a href="">Link Three</a>
+        <a href="">Link Fove</a>
+        <a href="">Link Five</a>
+    </nav>
+    <hr>
+    <h1>Flex Layout Center </h1>
+    <nav id="eg" style="display: flex; justify-content: center;"">
+        <a href="">Link one</a>
+        <a href="">Link Two</a>
+        <a href="">Link Three</a>
+        <a href="">Link Fove</a>
+        <a href="">Link Five</a>
+    </nav>
+    <hr>
+</body>
+</html>

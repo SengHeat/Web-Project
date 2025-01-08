@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+
+    <style>
+        #head {
+            background: dodgerblue;
+        }
+        #left {
+            background: darkgreen;
+        }
+        #right {
+            background: darkgreen;
+        }
+        #main {
+            background: darkred;
+        }
+        #footer {
+            background: darkslateblue;
+        }
+        #container {
+            display: grid;
+            grid-row: 2;
+            gap: 50px;
+        }
+        body {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Layout</h1>
+    <section id="container">
+
+        <head id="head">
+            <p>Head</p>
+        </head>
+
+        <aside id="left">
+            <p>Left</p>
+        </aside>
+
+        <main id="main">
+            <p>Main</p>
+        </main>
+        <aside id="right">
+            <p>Left</p>
+        </aside>
+        <footer id="footer">
+            <p>Footer</p>
+        </footer>
+
+    </section>
+</body>
+</html>

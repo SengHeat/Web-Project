@@ -1,0 +1,104 @@
+/* Reset some basic styling */
+body, html {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main stats-1"
+        "sidebar main stats-2"
+        "sidebar main stats-3"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr; /* Sidebar 1fr, Main 2fr, Stats 1fr */
+    grid-template-rows: auto auto auto auto auto; /* Dynamic rows */
+    gap: 15px;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    background-color: #008080;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Main Content */
+.main-content {
+    grid-area: main;
+    background-color: #e6e6fa;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Stats Sections */
+.stats {
+    background-color: #87ceeb;
+    color: #2f4f4f;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.stats-1 {
+    grid-area: stats-1;
+}
+
+.stats-2 {
+    grid-area: stats-2;
+}
+
+.stats-3 {
+    grid-area: stats-3;
+}
+
+/* Extra Content */
+.extra {
+    grid-area: extra;
+    background-color: #c0c0c0;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: #2f4f4f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "stats-1"
+            "stats-2"
+            "stats-3"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+}

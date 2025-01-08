@@ -1,0 +1,26 @@
+
+/* 
+external style
+កុំណត់ពុម្ពអក្សរសម្រាប់វេបសាយគឺជ្រើស body មកកុំណត់ 
+*/
+
+body {
+    font-family: "Khmer OS Siemrea";
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Khmer OS Muol Light";
+}
+
+a {
+    color: #000;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+
+
+

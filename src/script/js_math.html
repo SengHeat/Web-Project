@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .result {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Math Object Example</h1>
+
+    <div class="result" id="randomNum"></div>
+    <div class="result" id="maxNum"></div>
+    <div class="result" id="minNum"></div>
+    <div class="result" id="sqrtResult"></div>
+    <div class="result" id="powerResult"></div>
+    <div class="result" id="randomBetween"></div>
+    <div class="result" id="piValue"></div>
+    <div class="result" id="eValue"></div>
+
+    <script>
+        // Using Math.random() to generate a random number between 1 and 100
+        const randomNum = Math.floor(Math.random() * 100) + 1;
+        document.getElementById('randomNum').innerText = `Random number between 1 and 100: ${randomNum}`;
+
+        // Finding the maximum and minimum values
+        const maxNum = Math.max(10, 20, 30, 40, 50);
+        const minNum = Math.min(10, 20, 30, 40, 50);
+        document.getElementById('maxNum').innerText = `Max: ${maxNum}`;
+        document.getElementById('minNum').innerText = `Min: ${minNum}`;
+
+        // Calculating square root and power
+        const sqrtResult = Math.sqrt(25);
+        const powerResult = Math.pow(2, 3);
+        document.getElementById('sqrtResult').innerText = `Square root of 25: ${sqrtResult}`;
+        document.getElementById('powerResult').innerText = `2^3: ${powerResult}`;
+
+        // Generating a random number between 1 and 5
+        const randomBetween = Math.floor(Math.random() * 5) + 1;
+        document.getElementById('randomBetween').innerText = `Random number between 1 and 5: ${randomBetween}`;
+
+        // Showing the value of Math.PI and Math.E
+        document.getElementById('piValue').innerText = `Math.PI: ${Math.PI}`;
+        document.getElementById('eValue').innerText = `Math.E: ${Math.E}`;
+    </script>
+
+</body>
+</html>
